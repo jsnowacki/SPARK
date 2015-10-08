@@ -18,8 +18,8 @@ object WordCount {
     val counts = file.flatMap(line => line.split(" "))
       .map(word => (word, 1))
       .reduceByKey(_ + _)
-    counts.saveAsTextFile(args(1))
-    //counts.coalesce(1).saveAsTextFile(args(1))
+    //counts.saveAsTextFile(args(1))
+    counts.coalesce(1).saveAsTextFile(args(1))
   }
 
 }

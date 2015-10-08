@@ -8,7 +8,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
-import pl.com.sages.spark.conf.SparkConfBuilder;
+import pl.com.sages.spark.java.conf.SparkConfBuilder;
 import scala.Tuple2;
 
 import java.util.Arrays;
