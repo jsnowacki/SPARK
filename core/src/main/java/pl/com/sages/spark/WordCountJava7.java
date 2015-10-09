@@ -1,14 +1,13 @@
-package pl.com.sages.spark.java;
+package pl.com.sages.spark;
 
 import org.apache.spark.SparkConf;
-import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
-import pl.com.sages.spark.java.conf.SparkConfBuilder;
+import pl.com.sages.spark.conf.SparkConfBuilder;
 import scala.Tuple2;
 
 import java.util.Arrays;
@@ -16,7 +15,7 @@ import java.util.Arrays;
 /**
  * Word Count Java
  */
-public class WordCount {
+public class WordCountJava7 {
 
     public static void main(String[] args) {
         SparkConf conf = SparkConfBuilder.buildLocal("word-count");

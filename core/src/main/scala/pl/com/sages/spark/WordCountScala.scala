@@ -1,12 +1,12 @@
-package pl.com.sages.spark.spark
+package pl.com.sages.spark
 
-import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.SparkContext
 import pl.com.sages.spark.conf.SparkConfBuilder
 
 /**
  * Word Count
  */
-object WordCount {
+object WordCountScala {
 
   def main(args : Array[String]): Unit = {
     val conf = SparkConfBuilder.buildLocal("word-count")

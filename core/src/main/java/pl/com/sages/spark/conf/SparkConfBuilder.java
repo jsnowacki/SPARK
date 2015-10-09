@@ -1,4 +1,4 @@
-package pl.com.sages.spark.java.conf;
+package pl.com.sages.spark.conf;
 
 import org.apache.spark.SparkConf;
 

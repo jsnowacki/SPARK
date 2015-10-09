@@ -6,7 +6,7 @@
       <artifactId>spark</artifactId>
       <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>spark-core</artifactId>
+  <artifactId>core</artifactId>
 
   <dependencies>
     <dependency>
@@ -37,6 +37,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
