@@ -106,7 +106,7 @@ public class HouseStatsDf {
     }
 
     public static void main(String[] args) {
-        SparkConf conf = SparkConfBuilder.buildLocal("house-stats");
+        SparkConf conf = SparkConfBuilder.buildLocal("house-stats-df");
         JavaSparkContext sc = new JavaSparkContext(conf);
         SQLContext sqlContext = new SQLContext(sc);
 

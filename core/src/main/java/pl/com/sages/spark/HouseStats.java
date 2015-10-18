@@ -12,9 +12,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Word Count Java 8
+ * House stats
  */
-
 public class HouseStats {
     public static final int HOOD_COLUMN = 1;
     public static final int TYPE_COLUMN = 2;

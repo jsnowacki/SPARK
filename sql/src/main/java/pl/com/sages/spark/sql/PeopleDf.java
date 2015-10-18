@@ -12,7 +12,7 @@ import pl.com.sages.spark.conf.SparkConfBuilder;
  */
 public class PeopleDf {
     public static void main(String[] args) {
-        SparkConf conf = SparkConfBuilder.buildLocal("house-stats");
+        SparkConf conf = SparkConfBuilder.buildLocal("people-df");
         JavaSparkContext sc = new JavaSparkContext(conf);
         SQLContext sqlContext = new SQLContext(sc);
 

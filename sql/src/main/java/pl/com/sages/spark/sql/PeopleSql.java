@@ -11,7 +11,7 @@ import pl.com.sages.spark.conf.SparkConfBuilder;
  */
 public class PeopleSql {
     public static void main(String[] args) {
-        SparkConf conf = SparkConfBuilder.buildLocal("house-stats");
+        SparkConf conf = SparkConfBuilder.buildLocal("people-sql");
         JavaSparkContext sc = new JavaSparkContext(conf);
         SQLContext sqlContext = new SQLContext(sc);
 
