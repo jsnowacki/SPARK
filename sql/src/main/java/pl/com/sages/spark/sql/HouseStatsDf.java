@@ -116,6 +116,7 @@ public class HouseStatsDf {
         DataFrame housesDf = sqlContext.createDataFrame(houses, Houses.class);
         housesDf.registerTempTable("houses");
         housesDf.show();
+//        housesDf.toJSON().saveAsTextFile("data/rollingsales_bronx.json");
 
         // The SQL way
 //        String query = "SELECT " +
@@ -148,7 +149,8 @@ public class HouseStatsDf {
                 avg("grossArea").as("avgGrossArea"),
                 avg("landArea").as("avgLandArea"),
                 avg("price").as("avgPrice"),
-                avg("year").as("avgYear"));
+                avg("year").as("avgYear"))
+                .orderBy("hood", "type");
         stats.show();
 
     }

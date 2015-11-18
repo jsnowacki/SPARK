@@ -1,8 +1,10 @@
 package pl.com.sages.spark.sql;
 
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.DataFrame;
+import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SQLContext;
 import pl.com.sages.spark.conf.SparkConfBuilder;
 
@@ -22,9 +24,9 @@ public class PeopleSql {
         df.registerTempTable("people");
         df.show();
 
-        DataFrame result = sqlContext.sql("SELECT surname, age FROM people");
+        DataFrame result = sqlContext.sql("SELECT surname, AVG(age) AS avgAge FROM people GROUP BY surname");
         result.show();
 
-        result.saveAsParquetFile("output/people.parquet");
+        //result.saveAsParquetFile("output/people.parquet");
     }
 }
