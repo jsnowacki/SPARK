@@ -19,7 +19,7 @@ import java.util.Objects;
 /**
  * Simple Spark SQL example
  */
-public class MovieLenseDf {
+public class MovieLensDf {
     public static boolean toBool(String s) {
         return !Objects.equals(s, "0");
     }
@@ -142,6 +142,5 @@ public class MovieLenseDf {
         DataFrame user = sqlContext.createDataFrame(userRdd, userSchema);
 
         user.show();
-
     }
 }
