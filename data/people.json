@@ -1,4 +1,4 @@
-{"name": "John", "surname": "Doe", "gender": "male", "age": 25}
-{"name": "Mike", "surname": "Foo", "gender": "male", "age": 35}
-{"name": "Liz", "surname": "Bar", "gender": "female", "age": 65}
-{"name": "Emily", "surname": "Doe", "gender": "female", "age": 34}
+{"name": "John", "surname": "Doe", "gender": "male", "age": 25, "children": 2}
+{"name": "Mike", "surname": "Foo", "gender": "male", "age": 35, "children": 0}
+{"name": "Liz", "surname": "Bar", "gender": "female", "age": 65, "children": 1}
+{"name": "Emily", "surname": "Doe", "gender": "female", "age": 34, "children": 3}
