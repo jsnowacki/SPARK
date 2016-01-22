@@ -1,19 +1,14 @@
 package pl.com.sages.spark;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.broadcast.Broadcast;
 import pl.com.sages.spark.conf.SparkConfBuilder;
 import scala.Tuple2;
-import scala.Tuple3;
 import scala.Tuple4;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

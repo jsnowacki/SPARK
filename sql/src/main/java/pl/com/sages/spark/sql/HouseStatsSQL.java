@@ -35,6 +35,4 @@ public class HouseStatsSQL {
         DataFrame stats = sqlContext.sql(query);
         stats.show();
     }
-
-
 }

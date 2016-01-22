@@ -25,5 +25,8 @@ public class PeopleDf {
         DataFrame result = df.select(df.col("surname"), df.col("age"));
         result.show();
 
+        // Pivot example - works in Spark 1.6.0+
+        //df.groupBy("surname").pivot("gender", Lists.newArrayList("male", "female")).avg("age").show();
+
     }
 }

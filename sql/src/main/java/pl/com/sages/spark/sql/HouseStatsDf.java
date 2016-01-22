@@ -8,9 +8,10 @@ import org.apache.spark.sql.GroupedData;
 import org.apache.spark.sql.SQLContext;
 import pl.com.sages.spark.conf.SparkConfBuilder;
 
-import static org.apache.spark.sql.functions.*;
-
 import java.io.Serializable;
+
+import static org.apache.spark.sql.functions.avg;
+import static org.apache.spark.sql.functions.count;
 
 /**
  * House stats the SQL way

@@ -7,8 +7,6 @@ import org.apache.spark.api.java.JavaSparkContext;
 import pl.com.sages.spark.conf.SparkConfBuilder;
 import scala.Tuple2;
 
-import java.util.Arrays;
-
 /**
  * Word Count Java 8
  */
