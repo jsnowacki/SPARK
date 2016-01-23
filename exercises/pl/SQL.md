@@ -1,5 +1,5 @@
-Zadania Apache Spark DataFrame
-==============================
+Zadania Apache Spark SQL
+========================
 
 W katalogu `data/` jest plik `rollingsales_bronx.json`.
 

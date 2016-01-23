@@ -1,7 +1,7 @@
 Zadania Apache Spark DataFrame
 ==============================
 
-W katalogu `data/` jest plik `rollingsales_bronx.csv` (żródło: Gutenberg Project ).
+W katalogu `data/` jest plik `rollingsales_bronx.csv`.
 
 1. Wszytaj dane o domach i policz domy, średnie obszarów, roku i ceny, grupując po dzielnicy i typie.
 2. Popraw jakość wyników usuwająć dane nie mające sensu; popraw równierz wyświetlanie danych.
