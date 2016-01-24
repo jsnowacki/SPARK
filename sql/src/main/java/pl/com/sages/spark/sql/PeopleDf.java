@@ -5,6 +5,11 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.DataFrame;
 import org.apache.spark.sql.SQLContext;
 import pl.com.sages.spark.conf.SparkConfBuilder;
+import scala.Tuple2;
+
+import java.util.Arrays;
+
+import static org.apache.spark.sql.functions.*;
 
 /**
  * Simple Spark SQL example
@@ -16,17 +21,36 @@ public class PeopleDf {
         SQLContext sqlContext = new SQLContext(sc);
 
         // Spark 1.4.0+
-        //DataFrame people = sqlContext.read().json("data/people.json");
+        //DataFrame df = sqlContext.read().json("data/people.json");
         // Spark 1.3.1
         DataFrame df = sqlContext.jsonFile("data/people.json");
-        df.registerTempTable("people");
         df.show();
+        df.printSchema();
 
-        DataFrame result = df.select(df.col("surname"), df.col("age"));
+        // Select something
+        df.select(df.col("surname"), df.col("age")).show();
+
+        // Do some aggregations
+        DataFrame result = df.groupBy("surname").agg(
+                col("surname"),
+                max("age").as("maxAge"),
+                sum("children").as("sumChildren"));
         result.show();
 
         // Pivot example - works in Spark 1.6.0+
-        //df.groupBy("surname").pivot("gender", Lists.newArrayList("male", "female")).avg("age").show();
+        //df.groupBy("surname").pivot("gender", Arrays.asList("male", "female")).avg("age").show();
 
+        // Go back to using RDD if needed
+        df.toJavaRDD().map(r -> {
+            // Spark 1.4.0+
+            //int iSurname = r.fieldIndex("surname");
+            //int iAge = r.fieldIndex("age");
+            // Spark 1.3.1
+            int iSurname = 4;
+            int iAge = 0;
+            String surname = r.getString(iSurname);
+            long age = r.getLong(iAge);
+            return new Tuple2<>(surname, age);
+        }).collect().forEach(System.out::println);
     }
 }
