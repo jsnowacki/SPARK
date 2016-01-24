@@ -16,13 +16,19 @@ public class PeopleSql {
         SQLContext sqlContext = new SQLContext(sc);
 
         // Spark 1.4.0+
-        //DataFrame people = sqlContext.read().json("data/people.json");
+        //DataFrame df = sqlContext.read().json("data/people.json");
         // Spark 1.3.1
         DataFrame df = sqlContext.jsonFile("data/people.json");
         df.registerTempTable("people");
         df.show();
 
-        DataFrame result = sqlContext.sql("SELECT surname, AVG(age) AS avgAge FROM people GROUP BY surname");
+        sqlContext.sql("SELECT surname, age FROM people").show();
+
+        DataFrame result = sqlContext.sql(
+                "SELECT surname, " +
+                "MAX(age) AS maxAge, " +
+                "SUM(children) as sumChildren " +
+                "FROM people GROUP BY surname");
         result.show();
 
         //result.saveAsParquetFile("output/people.parquet");
