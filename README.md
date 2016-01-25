@@ -1,19 +1,20 @@
 # SPARK
 
-Materia³y do szkolenia: SPARK Projektowanie rozwi¹zañ Big Data z wykorzystaniem Apache Spark
+Materials for course: Introduction to Big Data with Apache Spark
 
-# Struktura
+# Structure
 
-* `core` - przyk³ady wykorzystania Apache Spark   
-* `data` - dane do zadañ
-* `sql` - przyk³ady wykorzystania Apache Spark SQL  
-* `streaming` - przyk³ady wykorzystania Apache Spark SQL  
+* `core` - Apache Spark core examples  
+* `data` - data for the exercises
+* `exercises` - exercise questions
+* `sql` - Apache Spark SQL examples  
+* `streaming` - Apache Spark Streaming examples  
 
-# Budowanie
+# Building
 
-Wiêkszoœæ przyk³adów napisanych jest w jêzyku Java wersji 8, z wyj¹tekiem przyk³adów _Word Count_, które zosta³y napisane w Java 7, 8 oraz Scala; zobacz suffiksy. 
+Most of the examples are written in Java 8 apart from _Word Count_ examples, which are written in Java 7 and 8 and Scala; see the file suffixes.
 
-Do budowy projektu wkorzystujemy Apache Maven (http://maven.apache.org).
+The project is build with Apache Maven (http://maven.apache.org).
 
 ```bash
 mvn clean
