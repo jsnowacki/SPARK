@@ -16,9 +16,10 @@ public class HouseStatsSQL {
         JavaSparkContext sc = new JavaSparkContext(conf);
         SQLContext sqlContext = new SQLContext(sc);
 
-        DataFrame housesDf = sqlContext.jsonFile("data/rollingsales_bronx.json");
+        DataFrame housesDf = sqlContext.read().json("data/rollingsales_bronx.json");
         housesDf.registerTempTable("houses");
         housesDf.show();
+        housesDf.printSchema();
 
         // The SQL way
         String query = "SELECT " +
