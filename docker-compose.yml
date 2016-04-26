@@ -1,0 +1,8 @@
+jupyter:
+  restart: on-failure
+  image: jupyter/all-spark-notebook
+  ports:
+    - "8888:8888"
+  volumes:
+    - ./jupyter:/home/jovyan/work/jupyter/
+    - ./data:/home/jovyan/work/data/
