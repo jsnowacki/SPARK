@@ -23,6 +23,7 @@ __pycache__/
 # C extensions
 *.so
 
+/jupyter/solutions
 # Distribution / packaging
 .Python
 env/
@@ -106,9 +107,6 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
-
-
-.gitignore
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
