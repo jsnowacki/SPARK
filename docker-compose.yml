@@ -3,6 +3,7 @@ spark:
  build: ./docker
  ports:
    - "8888:8888"
+   - "4040-4080:4040-4080"
  volumes:
    - ./notebooks:/home/jovyan/work/notebooks/
    - ./data:/home/jovyan/work/data/
