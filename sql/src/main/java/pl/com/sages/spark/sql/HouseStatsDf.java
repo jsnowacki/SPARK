@@ -145,7 +145,7 @@ public class HouseStatsDf {
 //        //DataFrame stats = counts.join(avgs, counts.col("hood").equalTo(avgs.col("hood")).and(counts.col("type").equalTo(avgs.col("type"))));
 //        stats.show();
         // Variant 2 - a better way
-        DataFrame stats = groups.agg(housesDf.col("hood"), housesDf.col("type"),
+        DataFrame stats = groups.agg(
                 count("*").as("houseCount"),
                 avg("grossArea").as("avgGrossArea"),
                 avg("landArea").as("avgLandArea"),
