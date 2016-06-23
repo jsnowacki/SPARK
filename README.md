@@ -33,7 +33,7 @@ Setup steps:
     * https://docs.docker.com/windows/
     * https://docs.docker.com/linux/
     * https://docs.docker.com/mac/
-    * Note that for Mac OS X and Windows Docker Toolbox is the suggested installation method https://www.docker.com/products/docker-toolbox
+    * Use Docker Toolbox for Windows and Mac OS X https://www.docker.com/products/docker-toolbox
 * (OS X / Win) Open Docker Quickstart Terminal (use `Terminal`, not `iTerm`)
 * Go into this repository
 * Build docker `docker-compose build`
@@ -42,6 +42,13 @@ Setup steps:
     * Jupyter runs on port 8888 on localhost on Linux on Docker VM IP available from `docker-machine ip` on Mac OS X and Windows
     * `data` and `notebooks` directories are mounted directly from the host file system
     * Note that the container will close with the current terminal session closure 
+
+Potential issues:
+
+* Setup can take some time as Docker pulls a number of images from the network
+* Docker Toolbox with VirtualBox does not work well with Microsoft HyperV used by the new docker; remove HyperV before installing Docker Toolbox
+* Sometimes Docker has problem with getting IPs on restrictive networks
+* Put this repository into your home directory as Docker can have issues with mounting folders that are places outside of the home directory
 
 ## Manual setup
 
